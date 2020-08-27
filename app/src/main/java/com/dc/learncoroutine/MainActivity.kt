@@ -6,6 +6,7 @@ import com.dc.learncoroutine.coroutinejob.CoroutineJobActivity
 import com.dc.learncoroutine.databinding.ActivityMainBinding
 import com.dc.learncoroutine.gettingstarted.GettingStartedActivity
 import com.dc.learncoroutine.jobtimeout.JobTimeOutActivity
+import com.dc.learncoroutine.lifecyclescope.LifecycleScopeActivity
 import com.dc.learncoroutine.sequentialparalleltask.SequentialParallelTaskActivity
 import kotlinx.coroutines.Job
 
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.sequentialParallel.setOnClickListener {
             openActivity(SequentialParallelTaskActivity::class.java)
+        }
+
+        binding.lifecycleScope.setOnClickListener {
+            openActivity(LifecycleScopeActivity::class.java)
         }
     }
 }
