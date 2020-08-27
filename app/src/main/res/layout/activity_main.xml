@@ -33,6 +33,13 @@
             android:text="coroutine Job"
             tools:ignore="HardcodedText" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sequentialParallel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sequential Parallel Task"
+            tools:ignore="HardcodedText" />
+
     </LinearLayout>
 
 

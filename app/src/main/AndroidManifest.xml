@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".coroutinejob.CoroutineJobActivity"/>
+        <activity android:name=".sequentialparalleltask.SequentialParallelTaskActivity"></activity>
+        <activity android:name=".coroutinejob.CoroutineJobActivity" />
         <activity android:name=".jobtimeout.JobTimeOutActivity" />
         <activity android:name=".gettingstarted.GettingStartedActivity" />
         <activity android:name=".MainActivity">
