@@ -1,6 +1,6 @@
 # LearnCoroutine
 
-<b>Coroutine Examples</b>
+Coroutine Examples
 
 * Getting Started
 * Job Timeout
