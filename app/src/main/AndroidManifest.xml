@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".viewmodelscope.ViewModelScopeActivity"></activity>
+        <activity android:name=".livedatascope.LiveDataScopeActivity" />
+        <activity android:name=".viewmodelscope.ViewModelScopeActivity"/>
         <activity android:name=".lifecyclescope.LifecycleScopeActivity" />
         <activity android:name=".sequentialparalleltask.SequentialParallelTaskActivity" />
         <activity android:name=".coroutinejob.CoroutineJobActivity" />

@@ -54,6 +54,13 @@
             android:text="ViewModel Scope"
             tools:ignore="HardcodedText" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/liveDataScope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="liveData Scope"
+            tools:ignore="HardcodedText" />
+
     </LinearLayout>
 
 
