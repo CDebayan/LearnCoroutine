@@ -46,4 +46,12 @@ dependencies {
     //Lifecycle scope
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-alpha07'
 
+    //ViewModel scope
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha07'
+
+    //LiveData scope
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0-alpha07'
+
+    //implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.0-alpha07'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 }

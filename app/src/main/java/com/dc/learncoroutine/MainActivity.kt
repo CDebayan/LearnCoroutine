@@ -8,6 +8,7 @@ import com.dc.learncoroutine.gettingstarted.GettingStartedActivity
 import com.dc.learncoroutine.jobtimeout.JobTimeOutActivity
 import com.dc.learncoroutine.lifecyclescope.LifecycleScopeActivity
 import com.dc.learncoroutine.sequentialparalleltask.SequentialParallelTaskActivity
+import com.dc.learncoroutine.viewmodelscope.ViewModelScopeActivity
 import kotlinx.coroutines.Job
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.lifecycleScope.setOnClickListener {
             openActivity(LifecycleScopeActivity::class.java)
+        }
+
+        binding.viewModelScope.setOnClickListener {
+            openActivity(ViewModelScopeActivity::class.java)
         }
     }
 }
