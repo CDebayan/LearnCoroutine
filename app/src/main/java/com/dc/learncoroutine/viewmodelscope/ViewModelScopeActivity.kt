@@ -4,13 +4,8 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.dc.learncoroutine.R
 import com.dc.learncoroutine.databinding.ActivityViewModelScopeBinding
-import com.dc.learncoroutine.showToast
 import com.dc.learncoroutine.viewmodelscope.viewmodel.ViewModelScopeViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.withContext
 
 class ViewModelScopeActivity : AppCompatActivity() {
     private val viewModel: ViewModelScopeViewModel by lazy {

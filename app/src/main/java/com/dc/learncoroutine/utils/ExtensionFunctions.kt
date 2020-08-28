@@ -1,12 +1,15 @@
-package com.dc.learncoroutine
+package com.dc.learncoroutine.utils
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 
 fun Context.showToast(message : String?,duration : Int = Toast.LENGTH_SHORT){
-    Toast.makeText(this,message,duration).show()
+    message?.let {
+        Toast.makeText(this,message,duration).show()
+    }
 }
 
 fun <T> Context.openActivity(
@@ -23,4 +26,12 @@ fun <T> Context.openActivity(
     }
     intent.putExtra(bundleKey, bundle)
     startActivity(intent)
+}
+
+fun View.show() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.gone() {
+    this.visibility = View.GONE
 }

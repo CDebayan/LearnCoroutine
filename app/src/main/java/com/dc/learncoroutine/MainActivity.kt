@@ -9,8 +9,9 @@ import com.dc.learncoroutine.jobtimeout.JobTimeOutActivity
 import com.dc.learncoroutine.lifecyclescope.LifecycleScopeActivity
 import com.dc.learncoroutine.livedatascope.LiveDataScopeActivity
 import com.dc.learncoroutine.sequentialparalleltask.SequentialParallelTaskActivity
+import com.dc.learncoroutine.singlenetworkcall.SingleNetworkCallActivity
+import com.dc.learncoroutine.utils.openActivity
 import com.dc.learncoroutine.viewmodelscope.ViewModelScopeActivity
-import kotlinx.coroutines.Job
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
@@ -51,6 +52,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.liveDataScope.setOnClickListener {
             openActivity(LiveDataScopeActivity::class.java)
+        }
+
+        binding.singleNetworkCall.setOnClickListener {
+            openActivity(SingleNetworkCallActivity::class.java)
         }
     }
 }
