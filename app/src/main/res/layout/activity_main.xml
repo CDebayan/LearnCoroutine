@@ -68,6 +68,20 @@
             android:text="Single Network Call"
             tools:ignore="HardcodedText" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/parallelNetworkCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parallel Network Call"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sequentialNetworkCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sequential Network Call"
+            tools:ignore="HardcodedText" />
+
     </LinearLayout>
 
 

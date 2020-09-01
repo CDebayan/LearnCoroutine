@@ -1,16 +1,15 @@
-package com.dc.learncoroutine.singlenetworkcall
+package com.dc.learncoroutine.networkcall
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dc.learncoroutine.databinding.ActivitySingleNetworkCallBinding
-import com.dc.learncoroutine.singlenetworkcall.adapter.SingleNetworkCallAdapter
-import com.dc.learncoroutine.singlenetworkcall.model.User
-import com.dc.learncoroutine.utils.gone
-import com.dc.learncoroutine.utils.show
-import com.dc.learncoroutine.singlenetworkcall.viewmodel.SingleNetworkCallViewModel
-import com.dc.learncoroutine.utils.showToast
+import com.dc.learncoroutine.networkcall.adapter.SingleNetworkCallAdapter
+import com.dc.learncoroutine.networkcall.model.EmployeeModel
+import com.dc.learncoroutine.networkcall.model.EmployeesListModel
+import com.dc.learncoroutine.networkcall.viewmodel.SingleNetworkCallViewModel
+import com.dc.learncoroutine.utils.*
 
 class SingleNetworkCallActivity : AppCompatActivity() {
     private val binding: ActivitySingleNetworkCallBinding by lazy {
@@ -28,20 +27,20 @@ class SingleNetworkCallActivity : AppCompatActivity() {
     }
 
     private fun fetchUserList() {
-        viewModel.fetchUserList().observe(this, ::handleState)
+        viewModel.fetchEmployeesList().observe(this, ::handleState)
     }
 
-    private fun handleState(state: SingleNetworkCallViewModel.State) {
+    private fun handleState(state: Resource<EmployeesListModel>) {
         when (state) {
-            is SingleNetworkCallViewModel.State.Loading -> {
+            is Resource.Loading -> {
                 binding.progress.show()
                 binding.recyclerView.gone()
             }
-            is SingleNetworkCallViewModel.State.Success -> {
+            is Resource.Success -> {
                 binding.progress.gone()
-                setRecyclerView(state.userList)
+                setRecyclerView(state.data?.employeesList)
             }
-            is SingleNetworkCallViewModel.State.Error -> {
+            is Resource.Error -> {
                 binding.progress.gone()
                 binding.recyclerView.gone()
                 showToast(state.message)
@@ -49,8 +48,8 @@ class SingleNetworkCallActivity : AppCompatActivity() {
         }
     }
 
-    private fun setRecyclerView(userList: List<User>?) {
-        userList?.let {
+    private fun setRecyclerView(data: List<EmployeeModel>?) {
+        data?.let {
             binding.recyclerView.show()
             binding.recyclerView.layoutManager = LinearLayoutManager(this)
             binding.recyclerView.adapter = SingleNetworkCallAdapter(it)

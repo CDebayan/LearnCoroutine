@@ -9,25 +9,27 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    const val BASE_URL: String = "https://jsonplaceholder.typicode.com/"
+    const val BASE_URL: String = "http://dummy.restapiexample.com/api/v1/"
     private val okHttpClientBuilder = OkHttpClient.Builder()
     private val logInterceptor = HttpLoggingInterceptor()
+    private lateinit var api: Api
 
     fun invoke(enableInterceptor: Boolean = true): Api {
-        if (enableInterceptor && BuildConfig.DEBUG) {
-            logInterceptor.level = HttpLoggingInterceptor.Level.BODY
-        } else {
-            logInterceptor.level = HttpLoggingInterceptor.Level.NONE
+        if (!::api.isInitialized) {
+            if (enableInterceptor && BuildConfig.DEBUG) {
+                logInterceptor.level = HttpLoggingInterceptor.Level.BODY
+            } else {
+                logInterceptor.level = HttpLoggingInterceptor.Level.NONE
+            }
+            okHttpClientBuilder.addInterceptor(logInterceptor)
+
+            val retrofit = Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClientBuilder.build())
+                .build()
+            api = retrofit.create(Api::class.java)
         }
-
-        okHttpClientBuilder.addInterceptor(logInterceptor)
-
-        val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClientBuilder.build())
-            .build()
-
-        return retrofit.create(Api::class.java)
+        return api
     }
 }

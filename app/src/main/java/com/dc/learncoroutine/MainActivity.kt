@@ -8,8 +8,10 @@ import com.dc.learncoroutine.gettingstarted.GettingStartedActivity
 import com.dc.learncoroutine.jobtimeout.JobTimeOutActivity
 import com.dc.learncoroutine.lifecyclescope.LifecycleScopeActivity
 import com.dc.learncoroutine.livedatascope.LiveDataScopeActivity
+import com.dc.learncoroutine.networkcall.ParallelNetworkCallActivity
+import com.dc.learncoroutine.networkcall.SequentialNetworkCallActivity
 import com.dc.learncoroutine.sequentialparalleltask.SequentialParallelTaskActivity
-import com.dc.learncoroutine.singlenetworkcall.SingleNetworkCallActivity
+import com.dc.learncoroutine.networkcall.SingleNetworkCallActivity
 import com.dc.learncoroutine.utils.openActivity
 import com.dc.learncoroutine.viewmodelscope.ViewModelScopeActivity
 
@@ -56,6 +58,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.singleNetworkCall.setOnClickListener {
             openActivity(SingleNetworkCallActivity::class.java)
+        }
+
+        binding.parallelNetworkCall.setOnClickListener {
+            openActivity(ParallelNetworkCallActivity::class.java)
+        }
+
+        binding.sequentialNetworkCall.setOnClickListener {
+            openActivity(SequentialNetworkCallActivity::class.java)
         }
     }
 }

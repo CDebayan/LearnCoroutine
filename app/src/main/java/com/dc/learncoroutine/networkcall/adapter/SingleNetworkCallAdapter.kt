@@ -1,13 +1,12 @@
-package com.dc.learncoroutine.singlenetworkcall.adapter
+package com.dc.learncoroutine.networkcall.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dc.learncoroutine.databinding.ChildSingleNetworkCallBinding
-import com.dc.learncoroutine.singlenetworkcall.model.User
-import org.jetbrains.annotations.NotNull
+import com.dc.learncoroutine.networkcall.model.EmployeeModel
 
-class SingleNetworkCallAdapter(private val userList: List<User>) :
+class SingleNetworkCallAdapter(private val employeesList: List<EmployeeModel>) :
     RecyclerView.Adapter<SingleNetworkCallAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -24,16 +23,15 @@ class SingleNetworkCallAdapter(private val userList: List<User>) :
     }
 
     override fun getItemCount(): Int {
-        return userList.size
+        return employeesList.size
     }
 
     inner class ViewHolder(private val binding: ChildSingleNetworkCallBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun setDataToViews(position: Int) {
-            binding.name.text = userList[position].name
-            binding.username.text = userList[position].username
-            binding.email.text = userList[position].email
-            binding.phone.text = userList[position].phone
+            binding.name.text = employeesList[position].employeeName
+            binding.email.text = employeesList[position].employeeSalary
+            binding.phone.text = employeesList[position].employeeAge
         }
     }
 }
