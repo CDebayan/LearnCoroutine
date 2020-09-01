@@ -10,3 +10,5 @@
 * Viewmodel Scope
 * Livedata Scope
 * Single Network Call
+* Sequential NetworkCall
+* Parallel NetworkCall
