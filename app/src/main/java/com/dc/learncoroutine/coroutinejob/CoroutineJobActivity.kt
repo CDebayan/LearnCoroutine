@@ -131,7 +131,11 @@ class CoroutineJobActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         // cancelling the jobs
-        job1.cancel()
-        job2.cancel()
+        if(::job1.isInitialized){
+            job1.cancel()
+        }
+        if(::job2.isInitialized){
+            job2.cancel()
+        }
     }
 }

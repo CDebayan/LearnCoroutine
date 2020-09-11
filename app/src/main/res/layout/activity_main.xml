@@ -41,6 +41,13 @@
             tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/coroutineFlow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coroutine Flow"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/lifecycleScope"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

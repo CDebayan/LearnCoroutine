@@ -2,6 +2,7 @@ package com.dc.learncoroutine
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.dc.learncoroutine.coroutineflow.CoroutineFlowActivity
 import com.dc.learncoroutine.coroutinejob.CoroutineJobActivity
 import com.dc.learncoroutine.databinding.ActivityMainBinding
 import com.dc.learncoroutine.gettingstarted.GettingStartedActivity
@@ -42,6 +43,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.sequentialParallel.setOnClickListener {
             openActivity(SequentialParallelTaskActivity::class.java)
+        }
+
+        binding.coroutineFlow.setOnClickListener {
+            openActivity(CoroutineFlowActivity::class.java)
         }
 
         binding.lifecycleScope.setOnClickListener {
