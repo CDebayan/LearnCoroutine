@@ -9,6 +9,7 @@ import com.dc.learncoroutine.gettingstarted.GettingStartedActivity
 import com.dc.learncoroutine.jobtimeout.JobTimeOutActivity
 import com.dc.learncoroutine.lifecyclescope.LifecycleScopeActivity
 import com.dc.learncoroutine.livedatascope.LiveDataScopeActivity
+import com.dc.learncoroutine.localcall.RoomBasicActivity
 import com.dc.learncoroutine.networkcall.ParallelNetworkCallActivity
 import com.dc.learncoroutine.networkcall.SequentialNetworkCallActivity
 import com.dc.learncoroutine.sequentialparalleltask.SequentialParallelTaskActivity
@@ -76,6 +77,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.singleNetworkCallWithImages.setOnClickListener {
             openActivity(SingleNetworkCallWithImagesActivity::class.java)
+        }
+
+        binding.roomBasic.setOnClickListener {
+            openActivity(RoomBasicActivity::class.java)
         }
     }
 }

@@ -96,6 +96,13 @@
             android:text="Sequential Network Call With Images"
             tools:ignore="HardcodedText" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/roomBasic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room Basic"
+            tools:ignore="HardcodedText" />
+
     </LinearLayout>
 
 

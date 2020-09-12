@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".networkcall.SingleNetworkCallWithImagesActivity"></activity>
+        <activity android:name=".localcall.RoomBasicActivity"></activity>
+        <activity android:name=".networkcall.SingleNetworkCallWithImagesActivity" />
         <activity android:name=".coroutineflow.CoroutineFlowActivity" />
         <activity android:name=".networkcall.SequentialNetworkCallActivity" />
         <activity android:name=".networkcall.ParallelNetworkCallActivity" />
