@@ -1,10 +1,9 @@
 package com.dc.learncoroutine.coroutineflow
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.dc.learncoroutine.databinding.ActivityCoroutineFlowBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -73,7 +72,7 @@ class CoroutineFlowActivity : AppCompatActivity() {
             CoroutineScope(Main).launch {
                 fetchTransformResult().collect {
                     if (binding.transformTextView.text.isNullOrEmpty()) {
-                        binding.transformTextView.text = it.toString()
+                        binding.transformTextView.text = it
                     } else {
                         binding.transformTextView.text = binding.transformTextView.text.toString() + " , " + it
                     }

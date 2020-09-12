@@ -13,6 +13,7 @@ import com.dc.learncoroutine.networkcall.ParallelNetworkCallActivity
 import com.dc.learncoroutine.networkcall.SequentialNetworkCallActivity
 import com.dc.learncoroutine.sequentialparalleltask.SequentialParallelTaskActivity
 import com.dc.learncoroutine.networkcall.SingleNetworkCallActivity
+import com.dc.learncoroutine.networkcall.SingleNetworkCallWithImagesActivity
 import com.dc.learncoroutine.utils.openActivity
 import com.dc.learncoroutine.viewmodelscope.ViewModelScopeActivity
 
@@ -71,6 +72,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.sequentialNetworkCall.setOnClickListener {
             openActivity(SequentialNetworkCallActivity::class.java)
+        }
+
+        binding.singleNetworkCallWithImages.setOnClickListener {
+            openActivity(SingleNetworkCallWithImagesActivity::class.java)
         }
     }
 }

@@ -89,6 +89,13 @@
             android:text="Sequential Network Call"
             tools:ignore="HardcodedText" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/singleNetworkCallWithImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sequential Network Call With Images"
+            tools:ignore="HardcodedText" />
+
     </LinearLayout>
 
 

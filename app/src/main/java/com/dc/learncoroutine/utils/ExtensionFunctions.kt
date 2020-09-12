@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 
-fun Context.showToast(message : String?,duration : Int = Toast.LENGTH_SHORT){
+fun Context.showToast(message: String?, duration: Int = Toast.LENGTH_SHORT) {
     message?.let {
-        Toast.makeText(this,message,duration).show()
+        Toast.makeText(this, message, duration).show()
     }
 }
 
